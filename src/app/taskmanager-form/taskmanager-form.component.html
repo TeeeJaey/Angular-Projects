@@ -1,0 +1,23 @@
+
+
+<div class="form-group" style="width:90%;margin:20px">
+    <label for="task">Task</label>
+    <input #task
+        name="task"
+        type="text" 
+        class="form-control">
+    
+    <button class="btn btn-primary" type="button" style="width:100%" (click)="addTask(task)" >Add New Task</button>
+    <br>
+    <br>
+    <ul class="list-group">
+        <li
+            *ngFor="let task of tasks.controls"
+            class="list-group-item">
+            {{task.value}}
+            <button class="btn btn-tertiary" type="button" (click)="removeTask(task)" style="float:right;border:1px solid blue" >Delete</button>
+            <button class="btn btn-tertiary" type="button" (click)="viewTask(task)" style="float:right;border:1px solid blue" >View</button>
+        </li>
+    </ul>
+</div>
+
