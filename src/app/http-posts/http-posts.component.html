@@ -1,0 +1,23 @@
+
+<input  #title
+(keyup.enter)="createPost(title)"
+type="text"
+class="form-control">
+
+<ul class="list-group">
+<li 
+    *ngFor="let post of posts"
+    class="list-group-item">
+        {{post.title}}
+    <button
+        (click)="deletePost(post)"
+        class="btn btn-secondary btn-sm" style="background-color: #f50;float:right">
+            Delete
+    </button>
+    <button
+        (click)="updatePost(post)"
+        class="btn btn-secondary btn-sm" style="background-color: #09f;float:right">
+            Update
+    </button>
+</li>
+</ul>
