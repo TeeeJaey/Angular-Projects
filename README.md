@@ -1,6 +1,6 @@
 # Angular Project by Mosh Hamedani
 
-- This repository includes all some projects taught and made by Mosh Hamedani in the below course.
+- This repository includes some projects taught and made by Mosh Hamedani in the below course.
 - [The Complete Angular Course: Beginner to Advanced](https://www.udemy.com/course/the-complete-angular-master-class).
 - [More from Mosh Hamedani](https://programmingwithmosh.com/).
 
