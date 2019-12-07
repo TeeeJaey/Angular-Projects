@@ -6,6 +6,9 @@
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+## Get Requirements
+
+Run `npm install` for all packages, and then `npm install bootstarp --save` to get bootstrap
 
 ## Development server
 
