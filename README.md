@@ -1,5 +1,6 @@
 
-<img src="src/favicon.ico" height="200"  align="right" style="float:right" />
+<img src="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" height="200"  align="right" style="float:right" />
+
 # Angular Projects by Mosh Hamedani
 
 - This repository includes some projects taught and made by Mosh Hamedani in the below course & will get updated in the future as I go through the course.
