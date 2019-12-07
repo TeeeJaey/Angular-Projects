@@ -10,7 +10,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
 ## Get Requirements
-
+Download [NodeJS](https://nodejs.org/en/) 
 Run `npm install` to get all required Angular packages into your local system.
 
 ## Development server
