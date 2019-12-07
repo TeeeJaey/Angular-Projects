@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./like.component.css']
 })
 export class LikeComponent  {
-  @Input('likesCount') likesCount: number;
+  @Input('likesCount') likesCount: number = 99;
   @Input('isLiked') isLiked: boolean;
 
   onClick()

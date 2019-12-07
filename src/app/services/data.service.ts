@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { AppError } from '../app-error';
-import { NotFoundError } from '../not-found.error';
-import { BadInputError } from '../bad-input';
+import { AppError } from '../validators/app-error';
+import { NotFoundError } from '../validators/not-found.error';
+import { BadInputError } from '../validators/bad-input';
 
 @Injectable()
 export class DataService {

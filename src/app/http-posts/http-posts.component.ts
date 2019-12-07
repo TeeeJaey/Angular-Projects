@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../services/http.service';
-import { AppError } from '../app-error';
-import { NotFoundError } from '../not-found.error';
-import { BadInputError } from '../bad-input';
+import { AppError } from '../validators/app-error';
+import { NotFoundError } from '../validators/not-found.error';
+import { BadInputError } from '../validators/bad-input';
 
 @Component({
   selector: 'http-posts',
@@ -47,12 +47,12 @@ export class HttpPostsComponent implements OnInit {
       );
   }
 
-  updatePost(post)
+  updatePost(post, title: HTMLInputElement)
   {
 
     let index = this.posts.indexOf(post);
     let oldPost = this.posts[index].title;
-    this.posts[index].title = "Updated";
+    this.posts[index].title = title.value;
 
     this.service.update(post.id)
       .subscribe(

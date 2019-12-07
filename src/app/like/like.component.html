@@ -1,8 +1,14 @@
+<link rel="stylesheet" 
+href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+crossorigin="anonymous"/>
 
-
-<span class="glyphicon glyphicon-star"
+<img src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg"
+    class="rounded" alt="Cinque Terre" /> 
+<div>
+<span class="fas fa-heart"
     [class.highlighted]="isLiked"
     (click)="onClick()">    
 </span>
-
 <span>{{ likesCount }}</span>
+</div>
