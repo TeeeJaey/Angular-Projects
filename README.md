@@ -1,3 +1,5 @@
+
+<img src="src/favicon.ico" height="200"  align="right" style="float:right" />
 # Angular Projects by Mosh Hamedani
 
 - This repository includes some projects taught and made by Mosh Hamedani in the below course & will get updated in the future as I go through the course.
@@ -8,7 +10,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 ## Get Requirements
 
-Run `npm install` to get all required packages into your local system, and then `npm install bootstarp --save` to get bootstrap
+Run `npm install` to get all required packages into your local system, and then `npm install bootstarp --save` to get [Bootstrap](https://getbootstrap.com/).
 
 ## Development server
 
