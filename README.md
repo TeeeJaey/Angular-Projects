@@ -8,8 +8,8 @@
 - [More from Mosh Hamedani](https://programmingwithmosh.com/).
 
 This project was generated with
-- [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2
 - [NodeJS](https://nodejs.org/en/)  version 10.16.0.
+- [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2
 
 ## Get Requirements
 - Download [NodeJS](https://nodejs.org/en/) 
