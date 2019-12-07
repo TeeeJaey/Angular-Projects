@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Get Requirements
 
-Run `npm install` to get all required Angular packages into your local system, and then `npm install bootstarp --save` to get [Bootstrap](https://getbootstrap.com/).
+Run `npm install` to get all required Angular packages into your local system.
 
 ## Development server
 
