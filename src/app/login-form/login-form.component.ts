@@ -1,28 +1,29 @@
+
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AlertService } from '../common/services/alert.service';
-import { UserService } from '../common/services/user.service';
+import { AlertService  } from '../common/services/alert.service';
 import { AuthenticationService } from '../common/services/authentication.service';
 
-
 @Component({
-  selector: 'signup-form',
-  templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.css']
+  selector: 'login-form',
+  templateUrl: './login-form.component.html',
+  styleUrls: ['./login-form.component.css']
 })
-export class SignupFormComponent implements OnInit {
-    signupForm: FormGroup;
+
+export class LoginFormComponent implements OnInit {
+    loginForm: FormGroup;
     loading = false;
     submitted = false;
+    returnUrl: string;
 
     constructor(
         private formBuilder: FormBuilder,
+        private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private userService: UserService,
         private alertService: AlertService
     ) {
         // redirect to home if already logged in
@@ -32,16 +33,17 @@ export class SignupFormComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.signupForm = this.formBuilder.group({
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
+        this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
-            password: ['', [Validators.required, Validators.minLength(6)]]
+            password: ['', Validators.required]
         });
+
+        // get return url from route parameters or default to '/'
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.signupForm.controls; }
+    get f() { return this.loginForm.controls; }
 
     onSubmit() {
         this.submitted = true;
@@ -50,21 +52,22 @@ export class SignupFormComponent implements OnInit {
         this.alertService.clear();
 
         // stop here if form is invalid
-        if (this.signupForm.invalid) {
+        if (this.loginForm.invalid) {
             return;
         }
 
         this.loading = true;
-        this.userService.register(this.signupForm.value)
+        this.authenticationService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
-                    this.router.navigate(['/login-form']);
+                    this.router.navigate([this.returnUrl]);
                 },
                 error => {
                     this.alertService.error(error);
                     this.loading = false;
                 });
+
+                
     }
 }

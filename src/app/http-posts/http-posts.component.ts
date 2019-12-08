@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../services/http.service';
-import { AppError } from '../validators/app-error';
-import { NotFoundError } from '../validators/not-found.error';
-import { BadInputError } from '../validators/bad-input';
+import { HttpService } from './http.service';
+import { AppError } from '../common/validators/app-error';
+import { NotFoundError } from '../common/validators/not-found.error';
+import { BadInputError } from '../common/validators/bad-input';
 
 @Component({
   selector: 'http-posts',

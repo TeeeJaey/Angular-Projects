@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit} from '@angular/core';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { Component, OnInit} from '@angular/core'; 
+
 @Component({
   selector: 'github-profile',
   templateUrl: './github-profile.component.html',

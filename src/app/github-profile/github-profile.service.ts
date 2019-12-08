@@ -1,7 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService } from '../common/services/data.service';
 
 @Injectable()
 export class GithubProfileService extends DataService {

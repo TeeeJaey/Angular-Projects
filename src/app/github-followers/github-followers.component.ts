@@ -1,4 +1,4 @@
-import { GithubFollowersService } from './../services/github-followers.service';
+import { GithubFollowersService } from './github-followers.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/observable';

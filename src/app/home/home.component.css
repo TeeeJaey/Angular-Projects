@@ -1,0 +1,8 @@
+a{
+    cursor: pointer;
+}
+
+.isCurrent
+{
+    background-color: rgb(174, 255, 98);
+}
