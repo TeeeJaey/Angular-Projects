@@ -1,4 +1,4 @@
-<div *ngFor="let follower of followers" class="media" style ="margin:20px 0px">
+<div @slide *ngFor="let follower of followers" class="media" style ="margin:20px 0px">
     <img class="align-self-center avatar mr-3" src="{{ follower.avatar_url }}" alt="Generic placeholder image">
 
     <div class="media-body">

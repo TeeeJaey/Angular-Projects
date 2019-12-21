@@ -3,12 +3,15 @@ import { HttpService } from './http.service';
 import { AppError } from '../common/validators/app-error';
 import { NotFoundError } from '../common/validators/not-found.error';
 import { BadInputError } from '../common/validators/bad-input';
+import { fade } from '../common/animations';
 
 @Component({
   selector: 'http-posts',
   templateUrl: './http-posts.component.html',
-  styleUrls: ['./http-posts.component.css']
+  styleUrls: ['./http-posts.component.css'],
+  animations: [fade]
 })
+
 export class HttpPostsComponent implements OnInit {
 
   posts:any;

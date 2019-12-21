@@ -4,12 +4,16 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/combineLatest';
+import { slide } from '../common/animations';
 
 @Component({
   selector: 'github-followers',
   templateUrl: './github-followers.component.html',
-  styleUrls: ['./github-followers.component.css']
+  styleUrls: ['./github-followers.component.css'],
+  animations: [slide]
 })
+
+
 export class GithubFollowersComponent implements OnInit {
   followers: Object;
 
